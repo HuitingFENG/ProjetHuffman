@@ -3,17 +3,17 @@
 #include <string.h>
 
 
-#ifndef OCCURRENCES
-#define OCCURRENCES
+#ifndef OCCURRENCES_1
+#define OCCURRENCES_1
 
-typedef struct HuffNode {      // pour créer un arbre HuffTree
-    int w;       // nombre d'occurences d'une caractère
+typedef struct HuffNode {      // pour crÃ©er un arbre HuffTree
+    int w;       // nombre d'occurences d'une caractÃ¨re
     char ch;
     struct HuffNode* next;
     struct HuffNode* lchild;
     struct HuffNode* rchild;
 }HuffNode, * HuffTree;
-typedef struct HuffCode {    // pour créer un dictionnaire
+typedef struct HuffCode {    // pour crÃ©er un dictionnaire
     char ch;
     char* s;
     int len;
