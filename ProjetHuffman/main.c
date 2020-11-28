@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 int main(){
     Input2Binary("C:\\Projet Huffman\\Test Files\\Alice_input.txt","C:\\Projet Huffman\\Test Files\\Alice_binary.txt");
     printf("End of conversion !\n");
