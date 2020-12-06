@@ -29,6 +29,7 @@
 int main(){
     printf("Bonjour, nous allons utiliser la methode de Huffman pour compresser et decompresser le fichier Alice_input.\n");
     printf("Veuillez bien respecter des consignes indiquees dans le guide d'utilisateur avant de lancer le programme.\n");
+    printf("Merci de mettre les 9  Test files dans le projet. Le texte est à saisir dans Alice_input, il sera ensuite traduit en code binaire dans Alice_binary  \n");
     Input2Binary("C:\\Projet Huffman\\Test Files\\Alice_input.txt","C:\\Projet Huffman\\Test Files\\Alice_binary.txt");
     printf("\nLa traduction du texte original au texte binaire :\n");
     printf("Les bits du fichier Alice_input : %d\n", compter("C:\\Projet Huffman\\Test Files\\Alice_input.txt"));
