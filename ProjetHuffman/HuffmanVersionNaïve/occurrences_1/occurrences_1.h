@@ -1,32 +1,36 @@
+#ifndef occurrences_1_h
+#define occurrences_1_h
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX_INPUT 150000
+#define MAX_CODE 10000
 
-#ifndef OCCURRENCES
-#define OCCURRENCES
-
-typedef struct HuffNode {      // pour créer un arbre HuffTree
-    int w;       // nombre d'occurences d'une caractère
+typedef struct HuffNode {
+    // w est le nombre d'occurences d'une caractere (= weight)
+    int w;
+    // ch est le caractere (= character)
     char ch;
+    // utiliser next pour faire une LSC et une pile
     struct HuffNode* next;
+    // utiliser l'enfant gauche et l'enfant droit pour faire un arbre Huffman
     struct HuffNode* lchild;
     struct HuffNode* rchild;
-}HuffNode, * HuffTree;
-typedef struct HuffCode {    // pour créer un dictionnaire
-    char ch;
-    char* s;
-    int len;
-}HuffCode;
+}HuffNode, *HuffTree;
 
-int compter(char* sIn)`;
+void Input2Binary(char* sInput, char* sBinary);
+int compter(char* sInput);
+
 struct HuffNode* newNode(int ww, char cc);
-int isEmpty(struct HuffNode* root);
-void push(struct HuffNode** root, int data, char cc);
-struct HuffNode pop(struct HuffNode** root);
-void peek(struct HuffNode* root);
+int is_empty(struct HuffNode* root);
+void push(struct HuffNode** root, int ww, char cc);
 void display_pile(struct HuffNode* L);
-struct HuffNode* sort_stack(struct HuffNode* root);
-struct HuffNode* list_occurrences(char* sIn)
+struct HuffNode* sort_pile(struct HuffNode* root);
+struct HuffNode* list_occurrences(char* sInput);
+void free_list(struct HuffNode* L);
 
-#endif // 
+
+
+#endif /* occurrences_1_h */
