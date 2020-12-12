@@ -1,0 +1,224 @@
+\hypertarget{arbre__1_8h}{}\doxysection{arbre\+\_\+1.\+h File Reference}
+\label{arbre__1_8h}\index{arbre\_1.h@{arbre\_1.h}}
+
+
+Header du fichier arbre\+\_\+1.\+c.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}}
+\item 
+struct \mbox{\hyperlink{struct_min_node}{Min\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{arbre__1_8h_a00c1f0e7816626f58349492ef0720b5f}\label{arbre__1_8h_a00c1f0e7816626f58349492ef0720b5f}} 
+\#define {\bfseries M\+A\+X\+\_\+\+I\+N\+P\+UT}~150000
+\item 
+\mbox{\Hypertarget{arbre__1_8h_a540a4072a1ff838c1880d86b7ff600d6}\label{arbre__1_8h_a540a4072a1ff838c1880d86b7ff600d6}} 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+O\+DE}~10000
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} \mbox{\hyperlink{arbre__1_8h_af928895eb4474d134f4e91c01dd23977}{Huff\+Node}}
+\begin{DoxyCompactList}\small\item\em noeud de l\textquotesingle{}arbre de Huffman. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{arbre__1_8h_a90874f48a1f17a75bd10f7412edb13de}\label{arbre__1_8h_a90874f48a1f17a75bd10f7412edb13de}} 
+typedef struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$ {\bfseries Huff\+Tree}
+\item 
+typedef struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} \mbox{\hyperlink{arbre__1_8h_a552b4dbce5468ed99a83c7cbaff42a42}{Min\+Node}}
+\begin{DoxyCompactList}\small\item\em structure permettant de créer l\textquotesingle{}arbre \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$ \mbox{\hyperlink{arbre__1_8h_a59619d83620bd4e00c9ba27af9b42c18}{newnew\+Node}} (char cc, int ww)
+\begin{DoxyCompactList}\small\item\em créer un noeud de Huffman. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arbre__1_8h_a6a5ebec0de27e7bdee218a17fd3e4ae6}{minimize}} (struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} $\ast$min\+Node, int pos)
+\begin{DoxyCompactList}\small\item\em recherche le noeud qui a la plus petite fréquence dans les sous arbres gauche et droite . \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$ \mbox{\hyperlink{arbre__1_8h_a496fab38bf6a631ee1a14ce763cb06e8}{get\+\_\+min\+Node}} (struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} $\ast$min\+Node)
+\begin{DoxyCompactList}\small\item\em appelle la fonction minimize. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arbre__1_8h_a207186c7bd3e564600ae92662d39203b}{insert\+\_\+min\+Node}} (struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} $\ast$min\+Node, struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em insère un noeud dans un tableau de Huffman. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} $\ast$ \mbox{\hyperlink{arbre__1_8h_aea9b5e02a6075e95ac4078e20cd2007f}{create\+\_\+list\+\_\+min\+Node}} (struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$L)
+\begin{DoxyCompactList}\small\item\em créer une liste contenant tous les caratères et leurs fréquences. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$ \mbox{\hyperlink{arbre__1_8h_a314c906602029ecea912228bfb019104}{creer\+\_\+\+Huffman\+Tree}} (struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$L)
+\begin{DoxyCompactList}\small\item\em fonction principale qui permet de créer l\textquotesingle{}arbre de Huffman. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arbre__1_8h_ae062b29144d08d0b7f2bfc4004f09f4a}{display\+\_\+tree}} (struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$tree)
+\begin{DoxyCompactList}\small\item\em afficher l\textquotesingle{}arbre crée dans la fonction principale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arbre__1_8h_ad2f8f9826f4a8579afe47dfd1231aed5}{free\+\_\+hufftree}} (struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$ht)
+\begin{DoxyCompactList}\small\item\em libère l\textquotesingle{}arbre de Huffman crée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header du fichier arbre\+\_\+1.\+c. 
+
+\begin{DoxyAuthor}{Author}
+Aminetou J\+E\+L\+E\+DI \href{mailto:aminetou.jeledi@efrei.net}{\texttt{ aminetou.\+jeledi@efrei.\+net}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Decembre 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{arbre__1_8h_af928895eb4474d134f4e91c01dd23977}\label{arbre__1_8h_af928895eb4474d134f4e91c01dd23977}} 
+\index{arbre\_1.h@{arbre\_1.h}!HuffNode@{HuffNode}}
+\index{HuffNode@{HuffNode}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{HuffNode}{HuffNode}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}}}
+
+
+
+noeud de l\textquotesingle{}arbre de Huffman. 
+
+un noeud de Huffman. \mbox{\Hypertarget{arbre__1_8h_a552b4dbce5468ed99a83c7cbaff42a42}\label{arbre__1_8h_a552b4dbce5468ed99a83c7cbaff42a42}} 
+\index{arbre\_1.h@{arbre\_1.h}!MinNode@{MinNode}}
+\index{MinNode@{MinNode}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{MinNode}{MinNode}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} \mbox{\hyperlink{struct_min_node}{Min\+Node}}}
+
+
+
+structure permettant de créer l\textquotesingle{}arbre 
+
+structure permettant la construction de l\textquotesingle{}arbre. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{arbre__1_8h_aea9b5e02a6075e95ac4078e20cd2007f}\label{arbre__1_8h_aea9b5e02a6075e95ac4078e20cd2007f}} 
+\index{arbre\_1.h@{arbre\_1.h}!create\_list\_minNode@{create\_list\_minNode}}
+\index{create\_list\_minNode@{create\_list\_minNode}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{create\_list\_minNode()}{create\_list\_minNode()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_min_node}{Min\+Node}}$\ast$ create\+\_\+list\+\_\+min\+Node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$}]{L }\end{DoxyParamCaption})}
+
+
+
+créer une liste contenant tous les caratères et leurs fréquences. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em un} & noeud de Huffman. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la liste des noeuds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{arbre__1_8h_a314c906602029ecea912228bfb019104}\label{arbre__1_8h_a314c906602029ecea912228bfb019104}} 
+\index{arbre\_1.h@{arbre\_1.h}!creer\_HuffmanTree@{creer\_HuffmanTree}}
+\index{creer\_HuffmanTree@{creer\_HuffmanTree}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{creer\_HuffmanTree()}{creer\_HuffmanTree()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}}$\ast$ creer\+\_\+\+Huffman\+Tree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$}]{L }\end{DoxyParamCaption})}
+
+
+
+fonction principale qui permet de créer l\textquotesingle{}arbre de Huffman. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em un} & noeud de Huffman. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}arbre de Huffman rangé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{arbre__1_8h_ae062b29144d08d0b7f2bfc4004f09f4a}\label{arbre__1_8h_ae062b29144d08d0b7f2bfc4004f09f4a}} 
+\index{arbre\_1.h@{arbre\_1.h}!display\_tree@{display\_tree}}
+\index{display\_tree@{display\_tree}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{display\_tree()}{display\_tree()}}
+{\footnotesize\ttfamily void display\+\_\+tree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+
+
+afficher l\textquotesingle{}arbre crée dans la fonction principale. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em l\textquotesingle{}arbre} & de Huffman crée. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{arbre__1_8h_ad2f8f9826f4a8579afe47dfd1231aed5}\label{arbre__1_8h_ad2f8f9826f4a8579afe47dfd1231aed5}} 
+\index{arbre\_1.h@{arbre\_1.h}!free\_hufftree@{free\_hufftree}}
+\index{free\_hufftree@{free\_hufftree}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{free\_hufftree()}{free\_hufftree()}}
+{\footnotesize\ttfamily void free\+\_\+hufftree (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$}]{ht }\end{DoxyParamCaption})}
+
+
+
+libère l\textquotesingle{}arbre de Huffman crée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em un} & arbre de Huffman. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{arbre__1_8h_a496fab38bf6a631ee1a14ce763cb06e8}\label{arbre__1_8h_a496fab38bf6a631ee1a14ce763cb06e8}} 
+\index{arbre\_1.h@{arbre\_1.h}!get\_minNode@{get\_minNode}}
+\index{get\_minNode@{get\_minNode}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{get\_minNode()}{get\_minNode()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}}$\ast$ get\+\_\+min\+Node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} $\ast$}]{min\+Node }\end{DoxyParamCaption})}
+
+
+
+appelle la fonction minimize. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em un} & arbre \mbox{\hyperlink{struct_min_node}{Min\+Node}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le noeud ayant la fréquence la plus petite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{arbre__1_8h_a207186c7bd3e564600ae92662d39203b}\label{arbre__1_8h_a207186c7bd3e564600ae92662d39203b}} 
+\index{arbre\_1.h@{arbre\_1.h}!insert\_minNode@{insert\_minNode}}
+\index{insert\_minNode@{insert\_minNode}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{insert\_minNode()}{insert\_minNode()}}
+{\footnotesize\ttfamily void insert\+\_\+min\+Node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} $\ast$}]{min\+Node,  }\item[{struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}} $\ast$}]{parent }\end{DoxyParamCaption})}
+
+
+
+insère un noeud dans un tableau de Huffman. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em un} & arbre \mbox{\hyperlink{struct_min_node}{Min\+Node}} et le noeud à insérer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{arbre__1_8h_a6a5ebec0de27e7bdee218a17fd3e4ae6}\label{arbre__1_8h_a6a5ebec0de27e7bdee218a17fd3e4ae6}} 
+\index{arbre\_1.h@{arbre\_1.h}!minimize@{minimize}}
+\index{minimize@{minimize}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{minimize()}{minimize()}}
+{\footnotesize\ttfamily void minimize (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_min_node}{Min\+Node}} $\ast$}]{min\+Node,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+recherche le noeud qui a la plus petite fréquence dans les sous arbres gauche et droite . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em un} & noeud \mbox{\hyperlink{struct_min_node}{Min\+Node}} et la taille de son tableau. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{arbre__1_8h_a59619d83620bd4e00c9ba27af9b42c18}\label{arbre__1_8h_a59619d83620bd4e00c9ba27af9b42c18}} 
+\index{arbre\_1.h@{arbre\_1.h}!newnewNode@{newnewNode}}
+\index{newnewNode@{newnewNode}!arbre\_1.h@{arbre\_1.h}}
+\doxysubsubsection{\texorpdfstring{newnewNode()}{newnewNode()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_huff_node}{Huff\+Node}}$\ast$ newnew\+Node (\begin{DoxyParamCaption}\item[{char}]{cc,  }\item[{int}]{ww }\end{DoxyParamCaption})}
+
+
+
+créer un noeud de Huffman. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em un} & caractère et sa fréquence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un noeud de Huffman. 
+\end{DoxyReturn}
